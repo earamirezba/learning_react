@@ -1,15 +1,10 @@
-import React from 'react';
-import logo from './logo.svg'
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Hero from './components/hero';
-import Acordeon from './components/acordeon';
+import React from "react";
+import logo from './src/logo.svg'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
-function App() {
-  return (
-    <>
-      <Navbar bg="dark" variant="dark" sticky="top" expand="sm" collapseOnSelect>
+const Navigationbar = () => {
+    return ( 
+        <Navbar bg="dark" variant="dark" sticky="top" expand="sm">
         <Navbar.Brand>
           <img src={logo} width="40px" height="40px"/> {' '}
           Logo
@@ -30,26 +25,13 @@ function App() {
           <Nav.Link href="contact">Contact Us</Nav.Link>
           
         </Nav>
+
         </Navbar.Collapse>
 
        
 
       </Navbar>
-
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <Hero />
-          </div>
-        </div>
-        <div className="row">
-          <Acordeon />
-
-        </div>
-
-      </div>
-    </>
-  );
+     );
 }
-
-export default App;
+ 
+export default Navigationbar;
