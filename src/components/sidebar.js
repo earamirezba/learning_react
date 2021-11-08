@@ -1,18 +1,19 @@
 import React from "react";
-import { Button, Offcanvas } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Offcanvas from "react-bootstrap/Offcanvas"
+import { useState } from 'react';
 
-
-const Sidebar = () => {
-      const [show, setShow] = useState(false);
+function App() {
+  const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <button variant="primary" onClick={handleShow}>
         Launch
-      </Button>
+      </button>
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
@@ -26,6 +27,5 @@ const Sidebar = () => {
     </>
   );
 }
-      
 
-export default Sidebar;
+export default App;

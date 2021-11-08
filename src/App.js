@@ -5,11 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Hero from './components/hero';
 import Acordeon from './components/acordeon';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import Sidebar from './components/sidebar';
 
 function App() {
   return (
     <>
       <Navbar bg="dark" variant="dark" sticky="top" expand="sm" collapseOnSelect>
+      <Sidebar/>
         <Navbar.Brand>
           <img src={logo} width="40px" height="40px"/> {' '}
           Logo
@@ -35,7 +37,7 @@ function App() {
        
 
       </Navbar>
-
+      
       <div className="container">
         <div className="row">
           <div className="col">
